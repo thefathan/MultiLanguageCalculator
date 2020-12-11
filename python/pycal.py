@@ -7,7 +7,9 @@ def clear_screen():
 def exit():
     clear_screen()
     print("Anda keluar program!")
+    input("")
     sys.exit()
+
 
 
 print("===================PYTHON CALCULATOR===================")
