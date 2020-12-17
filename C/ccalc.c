@@ -2,6 +2,7 @@
 #include "boolean.h"
 #include "string.h"
 #include <unistd.h>
+#include <stdlib.h>
 
 
 float Tambah(float A, float B);
@@ -31,11 +32,14 @@ float Bagi(float A, float B) {
 
 int main() {
     printf("=================KALKULATOR C=================\n");
+    printf("\nTekan enter untuk lanjut...");
+    getchar();
 
     float A, B, hasil;
 
     boolean programState = true;
     while (programState == true) {
+        system("cls");
         char *op;
         char opt[20];
         printf("\nOperator yang tersedia\n+ - * /\n\nMasukkan operasi yang akan digunakan: ");
