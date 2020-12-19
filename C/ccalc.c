@@ -48,6 +48,7 @@ int main() {
 
 
         if (strcmp(opt, "+") == 0) {
+            system("cls");
             printf("\n========PENJUMLAHAN========\n");
             printf("Masukkan bilangan pertama: ");
             scanf("%f", &A);
@@ -73,6 +74,7 @@ int main() {
         }
 
         else if (strcmp(opt, "-") == 0) {
+            system("cls");
             printf("\n========PENGURANGAN========\n");
             printf("Masukkan bilangan pertama: ");
             scanf("%f", &A);
@@ -98,6 +100,7 @@ int main() {
 
 
         else if (strcmp(opt, "*") == 0) {
+            system("cls");
             printf("\n========PERKALIAN========\n");
             printf("Masukkan bilangan pertama: ");
             scanf("%f", &A);
@@ -123,6 +126,7 @@ int main() {
 
 
         else if (strcmp(opt, "/") == 0) {
+            system("cls");
             printf("\n========PEMBAGIAN========\n");
             printf("Masukkan bilangan pertama: ");
             scanf("%f", &A);
@@ -152,6 +156,7 @@ int main() {
         }
     }
     getchar();
+    system("cls");
     printf("Anda keluar dari kalkulator...");
     return 0;
 
