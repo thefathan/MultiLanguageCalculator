@@ -5,31 +5,64 @@ public class App {
         System.out.println("===========CALCULATOR JAVA===========");
 
 
-        int programState = 999;
-        while (programState == 999) {
+        while (true) {
             Scanner scanopt = new Scanner(System.in);
-            System.out.println("Masukkan operasi");
-            int opt = scanopt.nextInt();
+            System.out.println("\nTuliskan operasi yang akan digunakan\nPLUS | MINUS | KALI | BAGI | KELUAR\n");
+            String opt = scanopt.next();
 
-            System.out.println(opt);
-            // scanopt.close();
 
-            if (opt == 1) {
+            if (opt.compareTo("PLUS") == 0) {
                 Scanner scan = new Scanner(System.in);
+                System.out.print("Masukkan angka pertama: ");
                 float x = scan.nextFloat();
+                System.out.print("Masukkan angka kedua: ");
                 float y = scan.nextFloat();
-                scan.close();
 
                 Plus penjumlahan = new Plus(x, y);
-                System.out.println(penjumlahan.getResultPlus());
+                System.out.println("\nHasil dari " + x + " ditambah " + y + " adalah " + penjumlahan.getResultPlus());
             }
+
+            else if (opt.compareTo("MINUS") == 0) {
+                Scanner scan = new Scanner(System.in);
+                System.out.print("Masukkan angka pertama: ");
+                float x = scan.nextFloat();
+                System.out.print("Masukkan angka kedua: ");
+                float y = scan.nextFloat();
+
+                Minus pengurangan = new Minus(x, y);
+                System.out.println("\nHasil dari " + x + " dikurang " + y + " adalah " +pengurangan.getResultMinus());
+            }
+
+            else if (opt.compareTo("KALI") == 0) {
+                Scanner scan = new Scanner(System.in);
+                System.out.print("Masukkan angka pertama: ");
+                float x = scan.nextFloat();
+                System.out.print("Masukkan angka kedua: ");
+                float y = scan.nextFloat();
+
+                Kali perkalian = new Kali(x, y);
+                System.out.println("\nHasil dari " + x + " dikali " + y + " adalah " +perkalian.getResultKali());
+            }
+
+            else if (opt.compareTo("BAGI") == 0) {
+                Scanner scan = new Scanner(System.in);
+                System.out.print("Masukkan angka pertama: ");
+                float x = scan.nextFloat();
+                System.out.print("Masukkan angka kedua: ");
+                float y = scan.nextFloat();
+
+                Bagi pembagian = new Bagi(x, y);
+                System.out.println("\nHasil dari " + x + " dibagi " + y + " adalah " +pembagian.getResultBagi());
+            }
+
+            else if (opt.compareTo("KELUAR") == 0) {
+                System.out.println("\nKeluar program...");
+                break;
+            }
+
             else {
-                System.out.println("test");
+                System.out.println("\nAnda memasukkan perintah yang salah, mohon diulang...");
             }
         }
-
-
-        
-
     }
 }
